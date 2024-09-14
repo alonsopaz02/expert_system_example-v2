@@ -1,0 +1,77 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #faf8f5; /* Color de fondo principal */
+    justify-content: space-around;
+    font-family: 'Arial', sans-serif;    
+    height: 95%;
+    width: 100%;
+}
+
+.about-section {
+    background-color: #d4edf4; /* Azul claro */
+    border-radius: 20px;  
+    padding: 20px;  
+    width: 28%; /* Ajustar al 30% del contenedor */
+    text-align: left;
+    color: #000000;
+  }
+  .about-section h3 {
+    text-align: center; /* Centra el título */
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ff9e7a; /* Naranja */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    position: relative;
+  }
+
+  .about-section ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .about-section li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .about-section img {
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    margin: 10px auto; /* Centra la imagen horizontalmente */
+    width: 420px; /* Ancho uniforme para todas las imágenes */
+    height: 250px; /* Altura uniforme para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin deformarse */
+    margin-top: 50px;
+    object-fit: cover; /* Asegura que la imagen mantenga proporciones adecuadas */
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-section {
+      width: 90%; /* Hacer que las secciones ocupen más espacio en pantallas pequeñas */
+      margin-bottom: 20px;
+    }
+}

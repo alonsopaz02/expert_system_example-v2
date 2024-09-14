@@ -1,0 +1,22 @@
+.question-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b3e8ff; /* Fondo azul claro */
+  padding: 14px 25px;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 500px;
+  color: #333;
+  font-family: "Arsenal", sans-serif;
+  font-size: 1.1em;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+  
+  .question-text {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+
+  

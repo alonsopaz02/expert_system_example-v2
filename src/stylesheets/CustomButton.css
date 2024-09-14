@@ -1,0 +1,44 @@
+.custom-button-container {
+    display: flex;
+    align-items: center;
+    background-color: #D1E7F0; /* Fondo azul claro */
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 35%; /* Ajusta según el tamaño deseado */
+    margin-bottom: 20px;
+    margin-right: 10px;
+    
+
+}
+
+.custom-input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 21px;
+    color: #333;
+    border-radius: 25px 0 0 25px;
+    margin-left: 20px;
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;}
+
+.custom-button {
+    background-color: #FFA07A; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.custom-button:focus {
+    outline: none;
+}

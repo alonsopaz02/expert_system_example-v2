@@ -1,0 +1,111 @@
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #faf8f5;
+    /* Color de fondo principal */
+    font-family: "Arsenal", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    height: 85%;
+    width: 55%;
+    color: black;
+    flex-wrap: wrap;
+}
+
+.title-container {
+    width: 95%;
+    height: 50%;
+    justify-content: left;
+    align-items: left;
+
+    margin-top: 51px;
+    margin-left: 10%;
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 130px;
+}
+
+.descripcion-container {
+    height: 60%;
+    width: 100%;
+    border: 10px solid #2a2e30;
+    border-left: 15px solid #2a2e30;
+    /* Added border */
+    border-radius: 10px 0 0 0 solid #2a2e30;
+    font-size: 27px;
+    font-family: "Radley", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    margin-top: 42px;
+    background-color: #2a2e30;
+
+}
+
+.descripcion {
+    width: 65%;
+    height: 40%;
+    justify-content: left;
+    align-items: left;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.boton-container {
+    width: 95%;
+    height: 50%;
+    border: 3px solid #2a2e30;
+    justify-content: left;
+    align-items: left;
+    margin-left: 5%;
+    margin-top: 0px;
+}
+
+.img-container {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el contenido se apile verticalmente */
+    height: 650px;
+    margin-top: 70px;
+}
+
+.img-header {
+    width: 100%;
+    height: 80px;
+    border: 2px solid rgb(7, 114, 255);
+    font-size: 50px;
+    color: black;
+    background-color: #d4edf4;
+    border: 12px solid #2a2e30;
+    border-right: 15px solid #2a2e30;
+}
+
+.x-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2a2e30;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    font-weight: 900;
+    border-right: 12px solid #2a2e30;
+    background-color: #ff9e7a;
+}
+
+.img-content {
+    width: 100%;
+    height: 100%;
+    /* Resta la altura del header */
+    object-fit: cover;
+    /* Para que la imagen se ajuste al contenedor */
+    /* Opcional: bordes para la imagen */
+    border-bottom: 14px solid #2a2e30;
+    border-left: 12px solid #2a2e30;
+    border-right: 15px solid #2a2e30;
+}

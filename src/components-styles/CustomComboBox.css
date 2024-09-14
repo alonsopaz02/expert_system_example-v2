@@ -1,0 +1,41 @@
+.custom-combobox {
+  display: inline-block;
+  background-color: #b3e8ff; /* Fondo azul claro */
+  border-radius: 10px;
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transición */
+}
+
+.custom-combobox:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+  background-color: #a0d8ff; /* Fondo ligeramente más claro al pasar el cursor */
+}
+
+.select-box {
+  background-color: transparent;
+  border: none;
+  font-family: "Arsenal", sans-serif;
+  font-size: 1em;
+  color: #333333;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.select-box:focus {
+  outline: none;
+}
+
+.custom-combobox::after {
+  content: '\25BC'; /* Flecha hacia abajo */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1em;
+  color: #333;
+}

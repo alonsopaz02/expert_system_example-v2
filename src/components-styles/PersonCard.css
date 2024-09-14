@@ -1,0 +1,40 @@
+.person-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    padding-right: 50px;
+    background-color: #ffcc99; /* Color de fondo para todos */
+    border: 2px dashed black;
+    border-radius: 40px;
+    width: 150px;
+    color: black;
+    
+  }
+  
+  
+  .person-card.male {
+    background-color: #aad6ff; /* Naranja para hombre */
+  }
+  
+  .person-card.female {
+    background-color: #f1bce6; /* Naranja para mujer */
+  }
+  
+  .person-card.central {
+    background-color: #ff6f5e; /* Color diferente para la tarjeta central */
+    grid-column: span 2;
+    border: 5px solid rgba(129, 0, 0, 0.521);
+    
+
+  }
+  
+  .person-icon {
+    font-size: 2em;
+  }
+  
+  .person-name {
+    font-weight: 900;
+    margin-top: 5px;
+  }
+  

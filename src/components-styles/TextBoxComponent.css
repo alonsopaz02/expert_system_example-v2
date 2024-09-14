@@ -1,0 +1,11 @@
+.text-box {
+    background-color: rgba(128, 128, 128, 0.2); /* Gris claro translúcido */
+    padding: 15px;
+    border-radius: 30px;
+    margin: 10px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: hsl(0, 0%, 20%);
+    width: 225px;
+  }
