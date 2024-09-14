@@ -135,3 +135,6 @@ progenitorRelations.forEach(([padre, hijos]) => {
         personas[hijo].agregarProgenitor(personas[padre]);
     });
 });
+
+// Exportar la clase Persona y el objeto personas
+export { Persona, personas };

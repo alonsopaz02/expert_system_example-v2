@@ -1,4 +1,4 @@
-import { personas, Persona } from './personas';
+import { personas } from './personas';
 
 // Estados genéticos
 const genSano = new Set(["mathias", "margarita", "noelia", "rodrigo", "gerson", "melany", "nicolas", "eduardo", "ariana", "joslenys", "esther", "maria", "wendy", "melva", "alonso", "alexandra", "jhon"]);
