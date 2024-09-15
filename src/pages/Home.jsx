@@ -1,59 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Cambiar useHistory por useNavigate
 import '../stylesheets/Home.css';
-import Header from '../components/Header'; // Ajusta la ruta según la ubicación de tu archivo Header.jsx
+import Header from '../components/Header';
 import CustomButton from '../components/CustomButton';
-import imghemo from '../assets/imghemo.png'; // Ajusta la ruta según la ubicación de tu imagen
-import Footer from '../components/Footer'; // Ajusta la ruta según la ubicación de tu archivo Footer.jsx
-
+import imghemo from '../assets/imghemo.png';
+import { personas } from '../utils/personas'; // Importa el objeto personas
 
 function Home() {
+  const [inputName, setInputName] = useState('');
+  const navigate = useNavigate(); // Reemplazo de useHistory por useNavigate
+
+  const handleCustomConsultClick = () => {
+    // Navegar a la página de CustomConsult
+    navigate('/form');
+  };
 
   const handleButtonClick = () => {
-    alert("Button clicked!");
+    const nameLowerCase = inputName.toLowerCase();
+
+    // Verifica si el nombre existe en la base de datos de personas
+    if (personas[nameLowerCase]) {
+      // Navegar a ExpertSystem2 pasando el nombre como parámetro
+      navigate(`/expertsystem?name=${inputName}`);
+    } else {
+      // Mostrar alerta si el nombre no está en las reglas
+      alert("El nombre ingresado no se encuentra en la base de datos.");
+    }
   };
 
   return (
     <div className="home-container">
       <Header />
       <div className="main-container">
-        <div className="title-container">
-          Deteccion de Hemofilia
-        </div>
+        <div className="title-container">Detección de Hemofilia</div>
         <div className="descripcion-container">
-          <div className="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam.
+          <div className="descripcion">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
           <div className="boton-container">
             <CustomButton
               placeholderText="Ingresa tu nombre"
               buttonText="➡️"
-              onClick={handleButtonClick}
+              onChange={(e) => setInputName(e.target.value)} // Capturar valor del input
+              onClick={handleButtonClick} // Ejecutar la validación y navegación
             />
-
             <CustomButton
               placeholderText="Consulta personalizada"
               buttonText="➡️"
-              onClick={handleButtonClick}
+              onClick={handleCustomConsultClick} // Redirigir a la página de CustomConsult
             />
           </div>
         </div>
       </div>
       <div className="img-container">
         <div className="img-header">
-          <div className="x-icon">
-            X
-          </div>
+          <div className="x-icon">X</div>
         </div>
-        <img
-          src={imghemo}  // Utiliza la imagen importada
-          alt="Hemofilia" 
-          className="img-content"
-        />
+        <img src={imghemo} alt="Hemofilia" className="img-content" />
       </div>
-      <div className="description">
-      </div>
-      <Footer />
     </div>
   );
 }

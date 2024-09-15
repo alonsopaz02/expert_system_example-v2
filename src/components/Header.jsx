@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa el componente Link
 import '../components-styles/Header.css'; // Asegúrate de tener el archivo CSS en la ubicación correcta
 
 function Header() {
@@ -6,8 +7,9 @@ function Header() {
         <header className="header-container">
             <nav className="navbar">
                 <ul className="nav-links">
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">INFORMACIÓN EXTRA</a></li>
+                    {/* Usa el componente Link para redirigir a las rutas */}
+                    <li><Link to="/">INICIO</Link></li>
+                    <li><Link to="/about">INFORMACIÓN EXTRA</Link></li>
                 </ul>
                 <div className="search-bar">
                     <input type="text" placeholder="Buscar" />

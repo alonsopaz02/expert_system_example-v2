@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../stylesheets/ExpertSystem2.css';
 import Header from '../components/Header';
 import PersonCardComponent from '../components/PersonCardComponent';
@@ -6,17 +7,22 @@ import HemophiliaStatusButton from '../components/HemophiliaStatusButton';
 import TextBoxComponent from '../components/TextBoxComponent';
 import Footer from '../components/Footer';
 import FamilyTreeComponent from '../components/FamilyTreeComponent';
-import { personas } from '../utils/personas';  
-import { estadoHemofilia, encontrarPareja } from '../utils/reglas';  
+import { personas } from '../utils/personas';  // Importa las personas
+import { estadoHemofilia, encontrarPareja } from '../utils/reglas';  // Importa las reglas
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 function ExpertSystem2() {
   const [persona, setPersona] = useState(null);
   const [estadoHemofiliaPersona, setEstadoHemofiliaPersona] = useState('');
-  const [progenitores, setProgenitores] = useState([]);
-  const [pareja, setPareja] = useState(null);
-  const [descendientes, setDescendientes] = useState([]);
-
-  const nombreSeleccionado = "alonso";
+  const [progenitores, setProgenitores] = useState('');
+  const [pareja, setPareja] = useState('');
+  const [descendientes, setDescendientes] = useState('');
+  
+  const query = useQuery();
+  const nombreSeleccionado = query.get("name").toLowerCase(); // Recibir el nombre pasado desde Home
 
   useEffect(() => {
     const personaSeleccionada = personas[nombreSeleccionado];
