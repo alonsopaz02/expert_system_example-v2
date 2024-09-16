@@ -35,7 +35,7 @@ function Home() {
         <div className="title-container">Detección de Hemofilia</div>
         <div className="descripcion-container">
           <div className="descripcion">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            Sistema inteligente de detección de hemofilia. Puedes ingresar tu nombre y verificar si estás registrado o hacer una consulta personalizada.
           </div>
           <div className="boton-container">
             <CustomButton
