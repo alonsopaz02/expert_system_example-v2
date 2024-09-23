@@ -1,77 +1,72 @@
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8ed; /* Color de fondo principal */
 }
 
-
 .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #faf8f5; /* Color de fondo principal */
-    justify-content: space-around;
-    font-family: 'Arial', sans-serif;    
-    height: 95%;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Arsenal", sans-serif;  
+  height: 95%;
+  width: 100%;
 }
 
 .about-section {
-    background-color: #d4edf4; /* Azul claro */
-    border-radius: 20px;  
-    padding: 20px;  
-    width: 28%; /* Ajustar al 30% del contenedor */
-    text-align: left;
-    color: #000000;
-  }
-  .about-section h3 {
-    text-align: center; /* Centra el título */
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    position: relative;
-    padding-bottom: 5px;
-  }
-  
-  .icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #ff9e7a; /* Naranja */
-    border-radius: 50%; /* Hace que el div sea un círculo */
-    position: relative;
-  }
+  background-color: #d4edf4; /* Azul claro */
+  border-radius: 20px;  
+  padding: 20px;  
+  width: 28%; /* Ajustar el ancho al 28% para mayor espacio */
+  text-align: left;
+  color: #000000;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
 
-  .about-section ul {
-    list-style-type: none;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  
-  .about-section li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-    text-align: left;
-  }
-  
-  .about-section img {
-    display: block; /* Hace que la imagen se comporte como un bloque */
-    margin: 10px auto; /* Centra la imagen horizontalmente */
-    width: 420px; /* Ancho uniforme para todas las imágenes */
-    height: 250px; /* Altura uniforme para todas las imágenes */
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin deformarse */
-    margin-top: 50px;
-    object-fit: cover; /* Asegura que la imagen mantenga proporciones adecuadas */
-    border-radius: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
+.about-section:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al hacer hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+.about-section h3 {
+  display: flex;
+  align-items: center; /* Alinea el título y el círculo verticalmente */
+  justify-content: space-between; /* Coloca el ícono y el título en los extremos */
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Reduce el espacio bajo el título */
+  padding-bottom: 5px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  width: 30px;
+  height: 30px;
+  background-color: #ff9e7a; /* Naranja */
+  border-radius: 50%; /* Hace que el div sea un círculo */
+  margin-left: 10px; /* Aumenta el espacio entre el título y el círculo */
+  font-size: 1.9rem; /* Ajusta el tamaño de la flecha si es necesario */
+  color: red; /* Asegúrate de que la flecha sea visible */
+}
+
+.about-section p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .about-container {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .about-section {
+  }
+
+  .about-section {
       width: 90%; /* Hacer que las secciones ocupen más espacio en pantallas pequeñas */
       margin-bottom: 20px;
-    }
+  }
 }
