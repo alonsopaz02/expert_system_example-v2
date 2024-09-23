@@ -32,18 +32,12 @@ function Home() {
     <div className="home-container">
       <Header />
       <div className="main-container">
-        <div className="title-container">Detección de Hemofilia</div>
+        <div className="title-container">GenDiag - Diagnóstico de Enfermedades</div>
         <div className="descripcion-container">
           <div className="descripcion">
-            Sistema inteligente de detección de hemofilia. Puedes ingresar tu nombre y verificar si estás registrado o hacer una consulta personalizada.
+            Sistema inteligente de detección de diferentes enfermedades genéticas. Solo ingresa para poder obtener una consulta personalizada.
           </div>
           <div className="boton-container">
-            <CustomButton
-              placeholderText="Ingresa tu nombre"
-              buttonText="➡️"
-              onChange={(e) => setInputName(e.target.value)} // Capturar valor del input
-              onClick={handleButtonClick} // Ejecutar la validación y navegación
-            />
             <CustomButton
               placeholderText="Consulta personalizada"
               buttonText="➡️"

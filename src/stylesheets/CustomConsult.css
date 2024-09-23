@@ -8,7 +8,6 @@
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
-  
 }
 
 .cc-all-container {
@@ -72,15 +71,33 @@
   border-radius: 5px;
   font-size: 1.2em;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.response-box {
-  width: 80%;
+.send-button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.diagnostico-container {
+  width: 70%;
   height: 160px;
   border: 1px solid #cccccc27;
   border-radius: 10px;
   padding: 10px;
-  font-size: 1.4em;
+  font-size: 1.05em;
+  font-family: "Arsenal", sans-serif;
   margin-top: 10px;
+  margin-left: 130px;
   background-color: #ff9d7a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.diagnostico-container:hover {
+  background-color: #ff7a5a;
+  transform: scale(1.02);
 }
